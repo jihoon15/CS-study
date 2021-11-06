@@ -20,6 +20,7 @@
 [이동](https://github.com/jihoon15/CS-study/tree/main/Operating%20System)
 
 1. 운영체제란?
+1. 운영체제 서론
 1. 프로세스와 쓰레드
 1. 인터럽트
 1. 시스템 콜
