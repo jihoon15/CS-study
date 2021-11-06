@@ -68,3 +68,5 @@ Command Interpreter
 <img src="img/OS_Application.JPG"></img><br/>
 
 애플리케이션은 위의 그림과 같이 운영체제 위에서 수행한다. 즉, 하드웨어 자원을 직접적으로 사용하지 않고 운영체제가 **제공하는 자원**만을 사용할 수 있다.
+
+---
