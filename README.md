@@ -8,14 +8,13 @@
 
 ---
 
-- [Operating System](<#OS(운영체제)>)
-- [네트워크](<#Network(네트워크)>)
-- 데이터베이스
-- [알고리즘](<#Algorithm(알고리즘)>)
+- [운영체제](#os)
+- [네트워크](#network)
+- [알고리즘](#algorithm)
 
 ---
 
-# OS(운영체제)
+# OS
 
 [이동](https://github.com/jihoon15/CS-study/tree/main/Operating%20System)
 
@@ -36,7 +35,7 @@
 
 ---
 
-# Network(네트워크)
+# Network
 
 [이동](https://github.com/jihoon15/CS-study/tree/main/Network)
 
@@ -50,6 +49,6 @@
 
 ---
 
-# Algorithm(알고리즘)
+# Algorithm
 
 [이동](https://github.com/jihoon15/CS-study/tree/main/Algorithm)
