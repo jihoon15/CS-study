@@ -77,7 +77,7 @@ HTML, CSS, 자바스크립트, 이미지, 폰트파일 등 **Rendering(렌더링
 >    > - ### DOM
 >    >
 >    > <br>  
->    >  <img src="img/WEB_MakeDOM.JPG" width="70%" height = "70%"></img>
+>    >  <img src="img/WEB_Make.JPG" width="70%" height = "70%"></img>
 >    > <br>
 >    > <br>
 >    >
