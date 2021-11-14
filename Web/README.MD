@@ -42,6 +42,8 @@ World Wide Web의 줄임말로 WWW라고도 함.<br>
 <br>
 <img src="img/WEB_server.JPG"></img><br/>
 
+<br>
+
 웹 브라우저(Web Browser)는 인터넷을 활용하기 위해 사용하는 프로그램이다.<br>
 HTML, CSS, 자바스크립트, 이미지, 폰트파일 등 **Rendering(렌더링)** 에 필요한 리소스를 서버에 요청하고 응답을 받아 화면을 구성한 뒤, 사용자에게 보여준다.
 
@@ -53,77 +55,159 @@ HTML, CSS, 자바스크립트, 이미지, 폰트파일 등 **Rendering(렌더링
 
 ---
 
-### Rendering
+## Web Browser
 
 <br>
 
-대부분의 브라우저는 렌더링을 수행하는 렌더링 엔진(Rendering Engine)을 가지고 있다.<br>
-렌더링이랑 HTML,CSS,JavaScript 등 개발자가 작성한 문서를 **브라우저에서 그래픽 형태로 출력하는 과정**을 말한다.
+> ### Rendering(렌더링)
+
+<br>
+
+> 대부분의 브라우저는 렌더링을 수행하는 렌더링 엔진(Rendering Engine)을 가지고 있다.<br>
+> 렌더링이랑 HTML,CSS,JavaScript 등 개발자가 작성한 문서를 **브라우저에서 그래픽 형태로 출력하는 과정**을 말한다.
+
+<br>
+
+> ### 렌더링 과정
+
+<br>
+
+> **_. . .브라우저마다 차이가 있습니다._** <br> >**_Google의 Web Fundamentals 문서를 참고하였습니다. https://developers.google.com/web/fundamentals?hl=ko_** > <br> > <bR>
+
+> 1.  DOM(Document Object Model) 과 CSSOM(CSS Object Model) 생성
+
+<br>
+
+> > - ### DOM
+
+<br>
+
+> > <img src="img/WEB_MakeDOM.JPG"></img><br/>
+
+<br>
+
+> > -**변환**<br>
+> > : 브라우저가 HTML의 원시 바이트를 디스크나 네트워크에서 읽어와서, 해당 파일에 대해 지정된 인코딩(예: UTF-8)에 따라 개별 문자로 변환합니다.
+
+<br>
+
+> > -**토큰화**<br>
+> > : 브라우저가 문자열을 W3C HTML5 표준에 지정된 고유 토큰으로 변환합니다(예: '', '' 및 꺽쇠괄호로 묶인 기타 문자열). 각 토큰은 특별한 의미와 고유한 규칙을 가집니다.
+
+<br>
+
+> > -**렉싱**<br>
+> > : 방출된 토큰은 해당 속성 및 규칙을 정의하는 '객체'로 변환됩니다.
+
+<br>
+
+<br>
+
+> > **DOM 생성**<br>
+> > : 마지막으로, HTML 마크업이 여러 태그(일부 태그는 다른 태그 안에 포함되어 있음) 간의 관계를 정의하기 때문에 생성된 객체는 트리 데이터 구조 내에 연결됩니다. 이 트리 데이터 구조에는 원래 마크업에 정의된 상위-하위 관계도 포합됩니다. 즉, HTML 객체는 body 객체의 상위이고, **_body_** 는 **_paragraph(p)_** 객체의 상위인 식입니다.
+
+<br>
+
+> > **이 전체 프로세스의 최종 출력이 바로 이 간단한 페이지의 DOM(Document Object Model)이며, 브라우저는 이후 모든 페이지 처리에 이 DOM을 사용합니다.**
+
+> > <br>
+
+<br>
+
+> > - ### CSSOM
+
+<br>
+
+> > <img src="img/WEB_CSSOM.JPG"></img><br/>
+
+<bR>
+
+> > CSS 바이트가 문자로 변환된 후 차례로 토큰과 노드로 변환되고 마지막으로 'CSS Object Model'(CSSOM)이라는 트리 구조에 링크됩니다.
+
+<bR>
+
+> > <img src="img/WEB_DOM.JPG"></img><br/>**_<DOM, CSSOM 구조도>_**
+
+<br>
+
+> > 서버로부터 받은 HTML, CSS를 다운로드 받아 연산과 관리가 유리하도록 Object Model을 생성한다.
+
+<br>
+
+> 2.  Render Tree 생성<br>
+
+<br>
+
+> > 1.  DOM 트리의 루트에서 시작하여 표시되는 노드 각각을 트래버스합니다.
+
+> > > - 일부 노드는 표시되지 않으며(예: 스크립트 태그, 메타 태그 등), 렌더링된 출력에 반영되지 않으므로 생략됩니다.<br>
+> > > - 일부 노드는 CSS를 통해 숨겨지며 렌더링 트리에서도 생략됩니다. 예를 들어,---위의 예시에서---span 노드의 경우 'display: none' 속성을 설정하는 명시적 규칙이 있기 때문에 렌더링 트리에서 누락됩니다.
+
+> > 2.  표시된 각 노드에 대해 적절하게 일치하는 CSSOM 규칙을 찾아 적용합니다.
+
+> > 3.  표시된 노드를 콘텐츠 및 계산된 스타일과 함께 내보냅니다.<br>
+
+<br>
+
+> > <img src="img/WEB_RenderTree.JPG"></img><br>**_<렌더 트리 구조도>_**
+
+<br>
+
+> > DOM Tree 와 CSSOM Tree를 이용해서 Render Tree를 생성한다.<br>
+
+> > DOM Tree와 다르게 **스타일 정보** 가 설정되어 있다.
+> > <br>
+
+> > . . . **실제 화면에 표현되는 노드**들로만 구성되어있다.
+
+<br>
+
+> 3.  자바스크립트 파싱<br>
+
+<br>
+
+> > 자바스크립트의 파싱은 CSS파싱과 마찬가지로 렌더링 엔진이 HTML 문서를 한줄 씩 읽어나가다 **_script태그_** 를 만나면 **자바스크립트 엔진**에 제어권을 넘기며 시작됩니다.
+
+<br>
+
+> > 자바스크립트 엔진은 CPU가 이해할 수 있는 저수준 언어로 자바스크립트 코드를 파싱하고,<br>
+> > DOM, CSSOM과 같은 AST(Abstract Syntax Tree) 생성합니다 . . . **AST: _토큰에 문법적 의미과 구조를 반영한 트리형태의 자료구조_**<br>
+> > 그리고 AST를 기반으로 바이트코드를 생성하여 인터프리터가 실행될 수 있도록 만듭니다.<br>
+
+<br>
+
+> > <img src="img/WEB_JS.JPG"></img><br/>
+
+<br>
+
+> 4.  Layout<br>
+
+<br>
+
+> > 생성된 Render Tree 노드들이 가지고 있는 스타일과 속성에 따라서 **브라우저 화면의 어느위치에 어느크기로 출력될지 계산하는 단계**이다.
+
+<br>
+
+> 5.  Paint<br>
+
+<br>
+
+> > 요소들을 실제 화면을 그리는 단계.<br>
+> > . . .Layout에서 요소들의 위치와 크기, 스타일 **계산이 완료된 Render Tree 를 이용해 실제 픽셀 값을 채워넣는다.** <br>
+> > 이 때 텍스트, 색, 이미지, 그림자 효과등이 모두 처리되어 그려진다.
+
+<br>
+
+> ### Reflow(Layout), Repaint(Paint)
+
+<br>
+
+> > 자바스크립트 코드가 실행되는 과정에서 DOM과 CSSOM을 변경하는 DOM API가 사용되면 변경된 DOM과 CSSOM이 다시 렌더트리로 결합되고 레이아웃과 페인트 과정을 거쳐 다시 렌더링됩니다. 이 과정을 리플로우(reflow), 리페인트(repaint)라고 합니다.
 
 <br>
 
 ---
 
-### 렌더링 과정
-
 <br>
 
-1. DOM(Document Object Model) 과 CSSOM(CSS Object Model) 생성
-
-<img src="img/WEB_DOM.JPG"></img><br/>
-**_<DOM, CSSOM 구조도> 출처 : http://bit.ly/3137pmh_**
-
-<br>
-
-서버로부터 받은 HTML, CSS를 다운로드 받아 연산과 관리가 유리하도록 Object Model을 생성한다.
-
-<br>
-
-2. Render Tree 생성<br>
-
-<br>
-
-<img src="img/WEB_RenderTree.JPG"></img><br/>
-**_<렌더 트리 구조도> 출처 : http://bit.ly/2Okn0fG_**
-
-<br>
-   DOM Tree 와 CSSOM Tree를 이용해서 Render Tree를 생성한다.<br>
-   DOM Tree와 다르게 __스타일 정보__가 설정되어 있다.<br>
-
-. . . **실제 화면에 표현되는 노드**들로만 구성되어있다.
-
-<br>
-
-3. 자바스크립트 파싱<br>
-
-<br>
-
-<br>
-
-4. Layout<br>
-
-<br>
-
-생성된 Render Tree 노드들이 가지고 있는 스타일과 속성에 따라서 **브라우저 화면의 어느위치에 어느크기로 출력될지 계산하는 단계**이다.
-
-<br>
-
-5. Paint<br>
-
-<br>
-
-요소들을 실제 화면을 그리는 단계.<br>
-. . .Layout에서 요소들의 위치와 크기, 스타일 **계산이 완료된 Render Tree 를 이용해 실제 픽셀 값을 채워넣는다.** <br>
-이 때 텍스트, 색, 이미지, 그림자 효과등이 모두 처리되어 그려진다.
-
----
-
-<br>
-
-### HTML, CSS , JavaScript
-
-<br>
-
----
-
-### DOM
+## Web Server
