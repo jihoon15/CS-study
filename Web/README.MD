@@ -226,8 +226,22 @@ HTML, CSS, 자바스크립트, 이미지, 폰트파일 등 **Rendering(렌더링
 >- 여러 개의 트랙잭션 관리 기능<br>
 >- 업무를 처리하는 비즈니스 로직 수행<br><br>
 
+<br>
+
+<img src="img/WEB_WAS.JPG"></img><br/><br>
+
+### WEB Server 와 WAS 분리 이유<br>
+<br>
+
+- __기능을 분리__ 하여 __서버의 부하를 방지__<br>
+  . . . WAS는 DB조회 등 페이지를 만들기 위한 다양한 로직을 처리하느라 바쁘다. 단순한 정적 콘텐츠를 WAS에서 제공한다면 다른 작업에 사용하는 리소스들로 인해 지연이 생겨날 수 있다. 그러므로 정적 콘텐츠는 Web Server선에서 빠르게 처리하는게 좋다.<bR><br>
+- 보안강화<br>
+  - SSL(Secure Socket Layer)에 대한 암복호화 처리에 Web Server 사용.
+  - 공격에 대해 Web Server을 앞단에 두어 중요한 정보가 담긴 WAS(DB나 로직)까지 전파되지 못하게 한다.
+<br>
 
 <br>
+
 
 ---
 
