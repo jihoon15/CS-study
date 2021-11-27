@@ -351,8 +351,22 @@ CGI 의 가장 큰 단점은 __멀티프로세스 방식__ 이란 것이다. 멀
 >. . . Java 코드 안에 HTML을 포함한다.<br>
 >~~. . .JSP는 HTML 문서 안에 Java 코드를 포함~~<br>
 
+<br>
 
+서블릿(Servlet)의 주요 특징<br>
+- 클라이언트의 Request에 대해 동적으로 작동하는 웹 애플리케이션 컴포넌트<br>
+- HTML을 사용하여 Response 한다.<br>
+- JAVA의 스레드를 이용하여 동작한다.<bR>
+- MVC 패턴에서의 컨트롤러로 이용된다.<br>
+- HTTP 프로토콜 서비스를 지원하는 javax.servlet.http.HttpServlet 클래스를 상속받는다.
+- UDP보다 속도가 느리다.<br>
+- HTML 변경 시 Servlet을 재 컴파일해야 하는 단점이 있다.<br>
 
+<br>
+
+### Servlet 의 기본적인 동작<br>
+<br>
+<img src="img/WEB_Servlet_Process.JPG"></img><br/><br>
 
 <br>
 
