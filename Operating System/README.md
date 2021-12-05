@@ -256,6 +256,45 @@ Command Interpreter
 
 <br>
 
+프로세스란?<br>
+> 메인 메모리에 할당되어 __실행중인 상태__ 인 프로그램<br>
+
+<br>
+ 프로그램은 일반적으로 하드디스크(보조기억장치)에 저장되어 아무 일도 하지 않는 상태이다.<Br>
+ 프로세스는 실행하면서 stack pointer, data, text, register 등이 끊임없이 변한다.<br> 프로세스는 job, task 등으로 불리기도 한다
+ <br>
+
+<br>
+프로세스 상태<br>
+<br>
+
+- New: 프로그램이 메인 메모리에 할당된다.
+- Ready: 할당된 프로그램이 초기화와 같은 작업을 통해 실행되기 위한 모든 준비를 마친다.
+- Running: CPU가 해당 프로세스를 실행한다.
+- Waiting: 프로세스가 끝나지 않은 시점에서 I/O로 인해 CPU를 사용하지 않고 다른 작업을 한다. (해당 작업이 끝나면 다시 CPU에 의해 실행되기 위해 ready 상태로 돌아가야 한다.)
+- Terminated: 프로세스가 완전히 종료된다.<br>
+<br>
+<img src="img/OS_ProcessState.JPG"></img><br/>
+
+<br>
+
+### PCB
+
+<br>
+ 
+__프로세스에 대한 모든 정보__ 가 모여있는 곳으로, Task Control Block(TCB) 이라고도 한다.<br>
+PCB안에는 프로세스의 상태, 프로세스 번호(PID), 해당 프로세스의 program counter(pc), register값, MMU정보, CPU점유 시간 등이 포함되어 있다.<br>
+PCB는 운영체제 내부의 프로세스를 관리하는 코드 부분에 저장되어 있다.
+
+<Br>
+
+<img src="img/OS_PCB.JPG"></img><br/>
+<br>
+
+. . . Context Switching 에 필요한 정보를 PCB에 저장한다.
+
+
+
 ---
 
 ## 프로세스 동기화
