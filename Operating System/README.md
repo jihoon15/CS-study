@@ -307,6 +307,38 @@ CPU는 한 프로세스가 종료될 때까지 수행하는 것이 아니라 여
 <br>
 <br>
 
+---
+
+## CPU Scheduling
+
+> CPU가 하나의 프로세스 작업이 끝나면 다음 프로세스 작업을 수행해야 한다.<br>
+> 이때 다음 프로세스가 어느 프로세스인지를 선택하는 알고리즘을 __CPU Scheduling__ 알고리즘이라고 한다.
+
+<br>
+
+### 선점 vs 비선점
+<br>
+
+- Preemptive(선점)은 프로세스가 CPU를 점유하고 있는 동안 I/O나 인터럽트가 발생한 것도 아니고 모든 작업을 끝내지도 않았는데, 다른 프로세스가 해당 __CPU를 강제로 점유__ 할 수 있다.<br>
+
+<br>
+
+- Non-preemptive(비선점)은 한 프로세스가 한 번 CPU를 점유했다면, __I/O 또는 프로세스가 종료__ 될 때까지 다른 프로세스가 CPU를 점유하지 못하는 것이다.<Br>
+
+<br>
+
+선점 알고리즘<br>
+FCFS(First Come First Service)<br>
+SJF(Shortest Job First)<br>
+HRN(Highest Response-ratio Next)<br>
+
+비선점 알고리즘<br>
+Round Robin<br>
+SRT(Shortest Remaining Time)<br>
+Multi Level Queue<br>
+Multi Level Feedback Queue<br>
+
+
 
 ---
 
