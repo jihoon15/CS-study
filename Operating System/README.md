@@ -6,6 +6,10 @@ Abraham Silberschatz , Peter B. Galvin , Greg Gagne)<br>
 
 ---
 
+목차
+
+---
+
 ## <h1> 운영체제란?
 
 컴퓨터의 하드웨어를 관리하는 소프트웨어, 하드웨어와 소프트웨어 사이의 **인터페이스**이다.
@@ -67,10 +71,12 @@ Command Interpreter
 
 <img src="img/OS_Application.JPG"></img><br/>
 
-애플리케이션은 위의 그림과 같이 운영체제 위에서 수행한다. 즉, 하드웨어 자원을 직접적으로 사용하지 않고 운영체제가 **제공하는 자원**만을 사용할 수 있다.
-<br>
+애플리케이션은 위의 그림과 같이 운영체제 위에서 수행한다. 즉, 하드웨어 자원을 직접적으로 사용하지 않고 운영체제가 **제공하는 자원**만을 사용할 수 있다.<br>
+<Br>
 
 ---
+
+<Br>
 
 ## 운영체제 역사
 
@@ -316,6 +322,18 @@ CPU는 한 프로세스가 종료될 때까지 수행하는 것이 아니라 여
 
 <br>
 
+
+레디큐 웨이트큐 등등 정리 좀더 위에 넣어야할듯 CPU스케줄링 바로위
+용어 정리
+
+- CPU Burst
+- I/O Burst
+- Time quantom
+
+
+
+<br>
+
 ### 선점 vs 비선점
 <br>
 
@@ -328,17 +346,54 @@ CPU는 한 프로세스가 종료될 때까지 수행하는 것이 아니라 여
 <br>
 
 선점 알고리즘<br>
-FCFS(First Come First Service)<br>
-SJF(Shortest Job First)<br>
-HRN(Highest Response-ratio Next)<br>
+- FCFS(First Come First Service)<br>
+  - 들어오는 순서대로 처리된다.
+
+  <br>
+
+- SJF(Shortest Job First)<br>
+  - 실행시간이 짧은 프로세스에게 우선순위, 실행시간이 긴 프로세스는 기아 상태 문제점
+
+  <br>
+
+- HRN(Highest Response-ratio Next)<br>
+  - SJF의 단점을 보완하기 위해 생겼다.<br>
+  - 우선순위 계산식을 이용하여 할당<br>
+  <br>
+  <img src="img/OS_HRN.JPG"></img><br/>
+<br>
 
 비선점 알고리즘<br>
-Round Robin<br>
-SRT(Shortest Remaining Time)<br>
-Multi Level Queue<br>
-Multi Level Feedback Queue<br>
+- Round Robin<br>
+  - 시분할 시스템을 위한 선점형 스케줄링 방식
+  - 우선순위를 두지 않고, 순서대로 시간단위(Time Quantum)로 CPU를 할당하는 방식
+  
+  <br>
 
+- SRT(Shortest Remaining Time)<br>
+  - SJF 스케줄링을 선점 형태로 수정한 방식
+  - 현재 작업 중인 프로세스를 중단시키고 최단 잔여시간 프로세스의 처리를 시작하는 방식
+    
+  <br>
 
+- Multi Level Queue<br>
+  - Ready Queue를 여러개로 분할
+  - 각 큐는 독립적인 스케줄링 알고리즘을 가짐(ex. Foreground - RR, Background - FCFS)
+  - 각 큐에 CPU time을 적절한 비율로 할당한다(ex. 80% for Foreground, 20% for Background)<br>
+<br>
+  <img src="img/OS_MLQ.JPG"></img><br/>
+<br>
+
+  <br>
+
+- Multi Level Feedback Queue<br>
+  - MLQ와 다르게 프로세스가 다른 큐로 이동가능.
+  - 처음 들어오는 프로세스는 무조건 맨 처음의 큐에 넣는다.
+  - 주어진 time quantom 동안 작업을 못 끝낼시에 다음 큐로 이동시킴. 다음 큐에서도 반복
+  - 이를 통해 CPU Burst 크기별로 구분된다.<br>
+  <br>
+  <img src="img/OS_MLFQ.JPG"></img><br/>
+<br>
 
 ---
 
