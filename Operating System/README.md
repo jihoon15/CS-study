@@ -315,22 +315,40 @@ CPU는 한 프로세스가 종료될 때까지 수행하는 것이 아니라 여
 
 ---
 
+## 프로세스 큐
+<br>
+프로세스는 수행하면서 상태가 여러 번 변하는데 이에 따라 서비스를 받아야하는 곳이 다르다.<br> 
+그리고 프로세스는 일반적으로 여러 개가 한 번에 수행되므로 그에 따른 순서가 필요하다.<br>
+이러한 순서를 대기하는 곳을 큐(queue)라고 부른다.
+
+<br>
+
+<img src="img/OS_ProcessQ.JPG"></img><br/>
+<br>
+
+- Job Queue: 하드디스크에 있는 프로그램이 실행되기 위해 메인 메모리의 할당 순서를 기다리는 큐이다.
+- __Ready Queue__: CPU 점유 순서를 기다리는 큐이다.(스케줄링)
+- __Waiting(Device) Queue__: I/O를 하기 위한 여러 장치가 있는데, 각 장치를 기다리는 큐가 각각 존재한다.
+
+<Br>
+
+이외의 용어<br>
+- CPU burst : 프로그램의 수행중에 연속적으로 CPU를 사용하는 단절된 구간<br>
+  (스케줄링의 단위)<br>
+- I/O burst : I/O를 요청한 다음 기다리는 시간<br>
+. . . CPU burst가 큰 프로세스를 CPU bound process, I/O burst가 큰 프로세스를 I/O bound process 라 한다.
+- Time quantum : time slice, 프로그램의 수행에 주어지는 시간, 시간 단위
+
+<br>
+
+---
+
+<br>
+
 ## CPU Scheduling
 
 > CPU가 하나의 프로세스 작업이 끝나면 다음 프로세스 작업을 수행해야 한다.<br>
 > 이때 다음 프로세스가 어느 프로세스인지를 선택하는 알고리즘을 __CPU Scheduling__ 알고리즘이라고 한다.
-
-<br>
-
-
-레디큐 웨이트큐 등등 정리 좀더 위에 넣어야할듯 CPU스케줄링 바로위
-용어 정리
-
-- CPU Burst
-- I/O Burst
-- Time quantom
-
-
 
 <br>
 
@@ -389,7 +407,7 @@ CPU는 한 프로세스가 종료될 때까지 수행하는 것이 아니라 여
 - Multi Level Feedback Queue<br>
   - MLQ와 다르게 프로세스가 다른 큐로 이동가능.
   - 처음 들어오는 프로세스는 무조건 맨 처음의 큐에 넣는다.
-  - 주어진 time quantom 동안 작업을 못 끝낼시에 다음 큐로 이동시킴. 다음 큐에서도 반복
+  - 주어진 time quantum 동안 작업을 못 끝낼시에 다음 큐로 이동시킴. 다음 큐에서도 반복
   - 이를 통해 CPU Burst 크기별로 구분된다.<br>
   <br>
   <img src="img/OS_MLFQ.JPG"></img><br/>
