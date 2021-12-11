@@ -345,6 +345,18 @@ CPU는 한 프로세스가 종료될 때까지 수행하는 것이 아니라 여
 
 <br>
 
+## 프로세스의 메모리 영역 
+
+<br>
+
+<img src="img/OS_ProcessMem.JPG"></img><br/>
+<br>
+
+
+---
+
+<br>
+
 ## CPU Scheduling
 
 > CPU가 하나의 프로세스 작업이 끝나면 다음 프로세스 작업을 수행해야 한다.<br>
