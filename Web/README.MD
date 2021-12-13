@@ -228,7 +228,10 @@ HTML, CSS, 자바스크립트, 이미지, 폰트파일 등 **Rendering(렌더링
 
 <br>
 
-<img src="img/WEB_WAS.JPG"></img><br/><br>
+<img src="img/WEB_WAS.JPG"></img><br/>
+___출처:https://velog.io/@dbfudgudals/was%EB%9E%80___<br>
+
+<br>
 
 ### WEB Server 와 WAS 분리 이유<br>
 <br>
@@ -242,10 +245,6 @@ HTML, CSS, 자바스크립트, 이미지, 폰트파일 등 **Rendering(렌더링
 
 <br>
 
-
----
-
----
 ---
 
 <br>
@@ -271,7 +270,10 @@ HTML, CSS, 자바스크립트, 이미지, 폰트파일 등 **Rendering(렌더링
 >>  
 >>  - ### MPA  <br>
 >>  <br>
->>  <img src="img/WEB_MPA.JPG"></img><br/><br>
+>>  <img src="img/WEB_MPA.JPG"></img><br/>
+>> 
+>>  ___출처:https://hanamon.kr/spa-mpa-ssr-csr-%EC%9E%A5%EB%8B%A8%EC%A0%90-%EB%9C%BB%EC%A0%95%EB%A6%AC___<br>
+>> <br>
 >>
 >>  - 장점<br>
 >>  1. __SEO__(Search Engine Optimization), 검색 엔진 최적화 관점에서 유리하다.<br>
@@ -289,7 +291,10 @@ HTML, CSS, 자바스크립트, 이미지, 폰트파일 등 **Rendering(렌더링
 >>
 >>  - ### SPA <br>
 >>  <br>
->>  <img src="img/WEB_SPA.JPG"></img><br/><br>
+>>  <img src="img/WEB_SPA.JPG"></img><br/>
+>>
+>>  ___출처:https://hanamon.kr/spa-mpa-ssr-csr-%EC%9E%A5%EB%8B%A8%EC%A0%90-%EB%9C%BB%EC%A0%95%EB%A6%AC___<br>
+>>  <br>
 >>
 >>  - 장점<bR>
 >>  1. 필요한 부분만 갱신하기 때문에 네이티브 앱에 가까운 자연스러운 페이지 이동을 제공할 수 있다.<br>
@@ -424,7 +429,9 @@ CGI 의 가장 큰 단점은 __멀티프로세스 방식__ 이란 것이다. 멀
 
 ### Servlet 의 기본적인 동작<br>
 <br>
-<img src="img/WEB_Servlet_Process.JPG"></img><br/><br>
+<img src="img/WEB_Servlet_Process.JPG"></img><br/>
+
+___출처 : https://gmlwjd9405.github.io/2018/10/28/servlet.html___
 
 <br>
 
