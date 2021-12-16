@@ -8,8 +8,19 @@ Abraham Silberschatz , Peter B. Galvin , Greg Gagne)<br>
 
 목차<br>
 
-[1. 운영체제란?](#운영체제란?)
-  - [운영체제 서론](#운영체제-서론)
+- [운영체제란?](#운영체제란?)
+- [운영체제 서론](#운영체제-서론)
+- [운영체제 역사](#운영체제-역사)
+- [인터럽트](#Interrupt(인터럽트))
+- [이중모드](#Dual-Mode(이중모드))
+- [운영체제 서비스](#운영체제-서비스)
+- [시스템 콜](#시스템-콜(System-call))
+- [프로세스](#프로세스(Process))
+- [스레드](#스레드(Thread))
+- [PCB](#PCB(Process-Control-Block))
+- [CPU Scheduling](#CPU-Scheduling)
+
+
 ---
 
 # 운영체제란?
@@ -28,7 +39,7 @@ Abraham Silberschatz , Peter B. Galvin , Greg Gagne)<br>
 
 ---
 
-## 운영체제 서론
+# 운영체제 서론
 
 <br>
 
@@ -128,7 +139,7 @@ C Source Code 에서 CPU의 Machine Code로 변환되는 과정은 OS 종속적�
 
 ---
 
-## Interrupt(인터럽트)
+# Interrupt(인터럽트)
 
 <br>
 
@@ -153,7 +164,7 @@ C Source Code 에서 CPU의 Machine Code로 변환되는 과정은 OS 종속적�
 
 ---
 
-## Dual Mode(이중모드)
+# Dual Mode(이중모드)
 
 <br>
 
@@ -177,7 +188,7 @@ C Source Code 에서 CPU의 Machine Code로 변환되는 과정은 OS 종속적�
 
 ---
 
-## 운영체제 서비스
+# 운영체제 서비스
 
 <br>
 
@@ -252,7 +263,7 @@ C Source Code 에서 CPU의 Machine Code로 변환되는 과정은 OS 종속적�
 
 <br><br>
 
-## 시스템 콜(System call)
+# 시스템 콜(System call)
 <br>
 
 > 시스템에 내장 된 서브 루틴에 대한 호출
@@ -283,7 +294,7 @@ __서브 루틴 호출__ 이라고도 한다. 서브 루틴은 특정 작업을 
 
 ---
 
-## 프로세스(Process)
+# 프로세스(Process)
 
 <br>
 
@@ -351,7 +362,7 @@ ___출처: TCP school___
 
 ---
 
-## 스레드
+# 스레드(Thread)
 
 <br>
 
@@ -390,7 +401,7 @@ fp(Frame Pointer)   : 현재 함수가 끝난 뒤에 반환될 위치주소를 �
 
 ---
 
-### PCB
+# PCB(Process Control Block)
 
 <br>
  
@@ -453,7 +464,7 @@ CPU는 한 프로세스가 종료될 때까지 수행하는 것이 아니라 여
 
 <br>
 
-## CPU Scheduling
+# CPU Scheduling
 
 > CPU가 하나의 프로세스 작업이 끝나면 다음 프로세스 작업을 수행해야 한다.<br>
 > 이때 다음 프로세스가 어느 프로세스인지를 선택하는 알고리즘을 __CPU Scheduling__ 알고리즘이라고 한다.
