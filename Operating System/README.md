@@ -9,7 +9,7 @@ Abraham Silberschatz , Peter B. Galvin , Greg Gagne)<br>
 목차<br>
 
 [1. 운영체제란?](#운영체제란?)
-  - [운영체제 서론](##운영체제-서론)
+  - [운영체제 서론](#운영체제-서론)
 ---
 
 # 운영체제란?
@@ -85,7 +85,7 @@ C Source Code 에서 CPU의 Machine Code로 변환되는 과정은 OS 종속적�
 
 <Br>
 
-## 운영체제 역사
+# 운영체제 역사
 
 <br>
 
