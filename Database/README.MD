@@ -14,6 +14,7 @@ Abraham Silberschatz, Henry F.Korth, S. Sudarshan)<br>
 
 > 다양한 데이터 항목들을 엑세스하고 갱신하는 프로그램 수행의 __단위__
 
+~~여러 쿼리를 하나의 작업으로 묶어주는것~~
 <br>
 
 . . .트랜잭션은 __begin transaction__ 과 __end transaction__ 형태의 명령문으로 구분된다.<br>
@@ -111,25 +112,49 @@ DB에서 동시 수행을 적용하는 동기는 본질적으로 OS에서 __다�
 SQL 표준에 지정된 고립성 수준
 
 1. Read Uncommited (Level 0)
->트랜잭션 수행 중이거나 __아직 commit 되지 않은 데이터를 다른 트랜잭션에서 Read 하는 것을 허용한다.__<br>
-> Dirty Read, Non Repeatable Read, Phantom Read 발생 가능
+> - 트랜잭션 수행 중이거나 __아직 commit 되지 않은 데이터를 다른 트랜잭션에서 Read 하는 것을 허용한다.__<br>
+> - Dirty Read, Non Repeatable Read, Phantom Read 발생 가능
 
 <br>
 
 2. Read Commited (Level 1)
-
+> - 트랜잭션 수행이 완료되고 __commit 된 데이터만 다른 트랜잭션에서 Read__ 하도록 허용<br>
+> - Non Repeatable Read, Phantom Read 발생가능<br>
+> - 일반적으로 Default로 설정하는 레벨(DBMS)
 
 <br>
+
 3. Repeatable Read (Level 2)
-<br>
-> 반복 읽기(Repeatable Read)는 커밋된 레코드들만 읽을 수 있고 한 트랜잭션이 한 레코드를 두 번 읽는 사이에 다른 트랜잭션이 그 레코드를 갱신하지 못하도록 한다.<br>
-> = commit 된 데이터만 다른 트랜잭션에서 Read하도록 허용
+> - 특정 트랜잭션에서 __읽고 있는 데이터는 다른 트랜잭션에서 수정/삭제가 불가능__ 하다.<br>
+> - __데이터 삽입은 가능하다.__<br>
+> - Phantom Read 발생가능<br>
+
+
 
 4. Serializable (Level 3)
-> 직렬적(Serializable)은 직렬적 실행을 보장한다.
+> - 특정 트랜잭션에서 __읽고 있는 데이터는 다른 트랜잭션에서 수정/삭제/삽입 모두 불가능__ 하다.
+> - 모든 이상 현상 방지 가능<br>
+> - 성능은 하락함<br>
 
 
 <br>
 
+위의 모든 고립성 수준은 추가적으로 Dirty Write를 허용하지 않는다.<br>
+= commit 또는 중단되지 않은 다른 트랜잭션이 기록한 데이터 항목에 대한 기록을 허용하지 않는다.
+
+<br>
+
+## 이상현상
+
+<BR>
+
+이상 현상 | 설명 |
+---| ---|
+|Dirty Read|어떤 트랜잭션에서 아직 __실행이 끝나지 않은 트랜잭션에 의한 변경사항__ 을 보게 되는 경우|
+|Non Repeatable Read ||
+|Phantom Read|어떤 트랜잭션이 같은 쿼리를 2번 실행하는데 그사이에 없던 레코드가 추가된 경우|
+
+
+<br>
 ---
 
