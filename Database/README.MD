@@ -151,7 +151,7 @@ SQL 표준에 지정된 고립성 수준
 이상 현상 | 설명 |
 ---| ---|
 |Dirty Read|어떤 트랜잭션에서 아직 __실행이 끝나지 않은 트랜잭션에 의한 변경사항__ 을 보게 되는 경우|
-|Non Repeatable Read |어떤 트랜잭션이 같은 쿼리를 2번 실행하는데 __그 사이에 다른 트랜잭션이 수정/삭제를 하는 경우__|
+|Non Repeatable Read |어떤 트랜잭션이 같은 쿼리를 2번 실행하는데 __그 사이에 다른 트랜잭션이 수정/삭제를 하여__ 다른 값이 나오는 경우|
 |Phantom Read|어떤 트랜잭션이 같은 쿼리를 2번 실행하는데 __그사이에 없던 레코드가 추가된 경우__|
 
 <br>
@@ -164,13 +164,13 @@ SQL 표준에 지정된 고립성 수준
 
 - Non Repeatable Read<br>
 
-<img src="img/DB_DirtyRead1.JPG"></img><br/><br/>
+<img src="img/DB_NonRepeatableRead.JPG"></img><br/><br/>
 
 <br>
 
 - Phantom Read<br>
 
-<img src="img/DB_DirtyRead1.JPG"></img><br/><br/>
+<img src="img/DB_PhantomRead.JPG"></img><br/><br/>
 
 <br>
 ---
