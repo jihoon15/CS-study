@@ -9,7 +9,9 @@ Abraham Silberschatz , Peter B. Galvin , Greg Gagne)<br>
 목차<br>
 
 - [운영체제란?](#운영체제란?)
-- [운영체제 서론](#운영체제-서론)
+
+- <a href = "#2">운영체제 서론</a>
+
 - [운영체제 역사](#운영체제-역사)
 - [인터럽트](#Interrupt(인터럽트))
 - [이중모드](#Dual-Mode(이중모드))
@@ -39,7 +41,7 @@ Abraham Silberschatz , Peter B. Galvin , Greg Gagne)<br>
 
 ---
 
-# 운영체제 서론
+<h2 id = "2">운영체제 서론</h2>
 
 <br>
 
