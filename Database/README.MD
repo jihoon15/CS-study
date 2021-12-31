@@ -173,5 +173,8 @@ SQL 표준에 지정된 고립성 수준
 <img src="img/DB_PhantomRead.JPG"></img><br/><br/>
 
 <br>
+
+# 동시성 제어
+
 ---
 

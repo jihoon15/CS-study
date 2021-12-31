@@ -10,9 +10,7 @@ Abraham Silberschatz , Peter B. Galvin , Greg Gagne)<br>
 
 - [운영체제란?](#운영체제란?)
 
-- <a href = "#2">운영체제 서론</a>
-
-- [운영체제 역사](#운영체제-역사)
+<!-- - [운영체제 역사](#운영체제-역사)
 - [인터럽트](#Interrupt(인터럽트))
 - [이중모드](#Dual-Mode(이중모드))
 - [운영체제 서비스](#운영체제-서비스)
@@ -20,7 +18,17 @@ Abraham Silberschatz , Peter B. Galvin , Greg Gagne)<br>
 - [프로세스](#프로세스(Process))
 - [스레드](#스레드(Thread))
 - [PCB](#PCB(Process-Control-Block))
-- [CPU Scheduling](#CPU-Scheduling)
+- [CPU Scheduling](#CPU-Scheduling) -->
+- <a href = "#Introduction">운영체제 서론</a>
+- <a href = "#History">운영체제 역사</a>
+- <a href = "#Interrupt">Interrupt</a>
+- <a href = "#ual Mode">Dual Mode</a>
+- <a href = "#2">운영체제 서비스</a>
+- <a href = "#2">System Call</a>
+- <a href = "#2">Process</a>
+- <a href = "#2">Thread</a>
+- <a href = "#2">PCB</a>
+- <a href = "#2">CPU Scheduling</a>
 
 
 ---
@@ -41,11 +49,12 @@ Abraham Silberschatz , Peter B. Galvin , Greg Gagne)<br>
 
 ---
 
-<h2 id = "2">운영체제 서론</h2>
+<h2 id = "Introduction">운영체제 서론</h2>
 
 <br>
 
 **-Booting**
+
 <br>
 
 컴퓨터의 구조를 단순화하면 이러하다.<br>
@@ -98,7 +107,7 @@ C Source Code 에서 CPU의 Machine Code로 변환되는 과정은 OS 종속적�
 
 <Br>
 
-# 운영체제 역사
+<h2 id = "History">운영체제 역사</h2>
 
 <br>
 
@@ -141,7 +150,7 @@ C Source Code 에서 CPU의 Machine Code로 변환되는 과정은 OS 종속적�
 
 ---
 
-# Interrupt(인터럽트)
+<h2 id = "Interrupt">Interrupt</h2>
 
 <br>
 
@@ -166,7 +175,7 @@ C Source Code 에서 CPU의 Machine Code로 변환되는 과정은 OS 종속적�
 
 ---
 
-# Dual Mode(이중모드)
+<h2 id = "Dual Mode">Dual Mode</h2>
 
 <br>
 
