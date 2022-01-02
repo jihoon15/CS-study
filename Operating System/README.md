@@ -22,13 +22,13 @@ Abraham Silberschatz , Peter B. Galvin , Greg Gagne)<br>
 - <a href = "#Introduction">운영체제 서론</a>
 - <a href = "#History">운영체제 역사</a>
 - <a href = "#Interrupt">Interrupt</a>
-- <a href = "#ual Mode">Dual Mode</a>
-- <a href = "#2">운영체제 서비스</a>
-- <a href = "#2">System Call</a>
-- <a href = "#2">Process</a>
-- <a href = "#2">Thread</a>
-- <a href = "#2">PCB</a>
-- <a href = "#2">CPU Scheduling</a>
+- <a href = "#Dual Mode">Dual Mode</a>
+- <a href = "#Service">운영체제 서비스</a>
+- <a href = "#System Call">System Call</a>
+- <a href = "#Process">Process</a>
+- <a href = "#Thread">Thread</a>
+- <a href = "#PCB">PCB</a>
+- <a href = "#CPU Scheduling">CPU Scheduling</a>
 
 
 ---
@@ -199,7 +199,7 @@ C Source Code 에서 CPU의 Machine Code로 변환되는 과정은 OS 종속적�
 
 ---
 
-# 운영체제 서비스
+<h2 id = "Service">운영체제 서비스</h2>
 
 <br>
 
@@ -274,7 +274,8 @@ C Source Code 에서 CPU의 Machine Code로 변환되는 과정은 OS 종속적�
 
 <br><br>
 
-# 시스템 콜(System call)
+<h2 id = "System call">시스템 콜</h2>
+
 <br>
 
 > 시스템에 내장 된 서브 루틴에 대한 호출
@@ -314,7 +315,7 @@ __서브 루틴 호출__ 이라고도 한다. 서브 루틴은 특정 작업을 
 
 ---
 
-# 프로세스(Process)
+<h2 id = "Process">프로세스</h2>
 
 <br>
 
@@ -382,7 +383,7 @@ ___출처: TCP school___
 
 ---
 
-# 스레드(Thread)
+<h2 id = "Thread">스레드</h2>
 
 <br>
 
@@ -421,7 +422,7 @@ fp(Frame Pointer)   : 현재 함수가 끝난 뒤에 반환될 위치주소를 �
 
 ---
 
-# PCB(Process Control Block)
+<h2 id = "PCB">PCB(Process Control Block)</h2>
 
 <br>
  
@@ -484,7 +485,7 @@ CPU는 한 프로세스가 종료될 때까지 수행하는 것이 아니라 여
 
 <br>
 
-# CPU Scheduling
+<h2 id = "CPU Scheduling">CPU Scheduling</h2>
 
 > CPU가 하나의 프로세스 작업이 끝나면 다음 프로세스 작업을 수행해야 한다.<br>
 > 이때 다음 프로세스가 어느 프로세스인지를 선택하는 알고리즘을 __CPU Scheduling__ 알고리즘이라고 한다.
