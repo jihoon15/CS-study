@@ -5,8 +5,10 @@ Abraham Silberschatz, Henry F.Korth, S. Sudarshan)<br>
 
 ---
 ## 목차
+- <a href = "#Transaction">트랜잭션</a>
 ---
-# 트랙잭션(Transaction)
+
+<h2 id = "Transaction">트랙잭션(Transaction)</h2>
 
 <br>
 
