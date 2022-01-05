@@ -6,6 +6,8 @@ Abraham Silberschatz, Henry F.Korth, S. Sudarshan)<br>
 ---
 ## 목차
 - <a href = "#Transaction">트랜잭션</a>
+    - <a href = "#Isolation Level">트랜잭션 격리 수준</a>
+
 ---
 
 <h2 id = "Transaction">트랙잭션(Transaction)</h2>
@@ -104,7 +106,8 @@ DB에서 동시 수행을 적용하는 동기는 본질적으로 OS에서 __다�
 
 <br>
 
-## 트랜잭션 격리 수준
+<h2 id = "Isolation Level">트랜잭션 격리 수준</h2>
+
 <br>
 직렬성은 프로그래머가 트랜잭션의 코드를 작성할 때에 __동시성을 고려하지 않을 수 있도록 해주는__ 유용한 개념이다.<br>
 모든 트랜잭션이 각자 혼자 수행되었을 때에 데이터베이스의 일관성을 깨지않는다면,<Br>
