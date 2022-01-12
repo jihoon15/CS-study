@@ -571,4 +571,6 @@ __임계 구역(critical section)__ 또는 공유변수 영역은 병렬컴퓨�
 
 <br>
 
+## Dead Lock(교착 상태)
+
 ---
