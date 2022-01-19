@@ -590,4 +590,12 @@ DeadLock __발생__ 조건
     - 이미 할당된 자원을 강제로 뺏을 수 없다.
  - 순환 대기
     - 프로세스가 자원을 요청하고 순환 형태로 대기해야한다.
+
+<br>
+
+Deadlock의 해결법<Br>
+- 예방(prevention)
+- 회피(avoidance)
+- 탐지(detection)
+
 ---
