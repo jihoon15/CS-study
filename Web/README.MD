@@ -504,3 +504,24 @@ OAuth를 통해서 획득하고 토큰을 통해 데이터를 가져오고, 수�
 
 
 OAuth 참여자
+
+
+- Resource Server
+    - Client가 제어하고자 하는 자원을 보유하고 있는 서버
+    - Google, FaceBook 등
+    
+    <br>
+
+- Resource Owner
+    - Client가 제공하는 서비스를 통해 로그인하는 유저
+    
+    <Br>
+
+- Client
+    - Resource Server에 접속해서 정보를 가져오고자 하는 클라이언트(Application)
+
+<br>
+
+---
+
+## 1. 등록
