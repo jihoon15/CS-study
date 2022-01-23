@@ -525,3 +525,25 @@ OAuth 참여자
 ---
 
 ## 1. 등록
+<br>
+
+~~서비스마다 상이하지만 공통적인 부분~~
+
+Client ID
+- 우리가 만들고있는 App을 식별하는 ID
+- 노출 가능
+
+Client Secret
+- Cliend ID에 대한 비밀번호
+- 절대로 노출되면 안된다
+
+Authorized redirect URIs
+- 리소스 서버가 권환을 부여하는 과정에서 Authorized code를 준다. 이 것을 전달받을 리다이렉트 주소
+- 등록되지 않은 리다이렉트 주소에서 오는 요청은 인증을 거부함
+
+. . . 등의 정보를 등록한다.
+
+<br>
+
+---
+## Resource Owner의 승인
