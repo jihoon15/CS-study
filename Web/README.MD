@@ -524,7 +524,7 @@ OAuth 참여자
 
 ---
 
-## 1. 등록
+## 등록
 <br>
 
 ~~서비스마다 상이하지만 공통적인 부분~~
@@ -547,3 +547,18 @@ Authorized redirect URIs
 
 ---
 ## Resource Owner의 승인
+
+<img src="img/WEB_OAuthReg1.JPG"></img><br/>
+
+1. 링크 클릭(ex. login with google)
+2. 링크
+<img src="img/WEB_OAuthURL.JPG"></img><br/>
+리다이렉트를 통해 3번으로 이동
+3. 로그인이 되어 있으면(안 되어있으면 로그인 요청) 정보를 확인한다(redirect url과 client id 등)
+4. 어떤 권한(scope)을 허용할 것이냐?
+5. 허락 한다. 
+Resource Server에서 Resource Owner가 어떤 기능을 어떤 scope에 대한 작업을 동의하였다. 를 기록한다.
+
+---
+
+## Resource Server의 승인
