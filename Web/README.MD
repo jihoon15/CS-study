@@ -463,14 +463,18 @@ JSP는 이와 반대로 __HTML, CSS, js를 기반__ 으로 JSP 요소들을 사�
 
 ## 인증(Authentication)과 인가(Authorization)
 
+<br>
+
 인증이란?
 > 보호된 리소스에 접근하는 것을 __허용하기 이전에__ 등록된 유저의 신원을 입증하는 과정
 . . . 신원이 올바른지 검증하기 위한 과정
+
 <br>
 
 인가란?
 > 요청된 리소스에 접근할 수 있는 __권한이 있는 인증된__ 유저인지 입증하는 과정
 . . . 신원을 기반으로 인증된 주체가 특정 리소스에 접근할 수 있는 권한을 주는 것.
+
 <br>
 
 . . .  인증 - 접근 허용 - 인가 - 리소스 접근 권한
@@ -548,17 +552,40 @@ Authorized redirect URIs
 ---
 ## Resource Owner의 승인
 
+<br>
+
 <img src="img/WEB_OAuthReg1.JPG"></img><br/>
 
 1. 링크 클릭(ex. login with google)
-2. 링크
-<img src="img/WEB_OAuthURL.JPG"></img><br/>
+2. 링크(ex
+<img src="img/WEB_OAuthURL.JPG"></img><br/>)
 리다이렉트를 통해 3번으로 이동
 3. 로그인이 되어 있으면(안 되어있으면 로그인 요청) 정보를 확인한다(redirect url과 client id 등)
 4. 어떤 권한(scope)을 허용할 것이냐?
 5. 허락 한다. 
 Resource Server에서 Resource Owner가 어떤 기능을 어떤 scope에 대한 작업을 동의하였다. 를 기록한다.
 
+<br>
+
 ---
 
 ## Resource Server의 승인
+
+<Br>
+
+<img src="img/WEB_OAuthReg2.JPG"></img><br/>
+
+<br>
+
+1. Resource Owner에게 authorization code(임시 비밀번호)를 전송<br> (redirect URL에 담아서,ex https://test/callback?__code=3__ 
+)
+2. Client에게 authorization code가 전송된다
+3. Client가 Resource Server에 직접 접속,<br>
+authorization code와 client id, client secret 전송
+4. Resource Server에서 자신의 기록과 일치하는지 비교한다.
+
+<Br>
+
+---
+
+## Access Token 발급
