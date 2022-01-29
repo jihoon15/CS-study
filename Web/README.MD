@@ -589,3 +589,36 @@ authorization code와 client id, client secret 전송
 ---
 
 ## Access Token 발급
+
+<img src="img/WEB_OAuthReg3.JPG"></img><br/>
+
+1. (authorization code 값을 지운다) accessToken을 발급하고 Client에 응답한다.
+2. Client는 내부적으로 토큰을 저장한다.
+
+---
+
+## Refresh Token
+
+accessToken에는 수명이있다. 수명이 다 할시에 재발급을 받아야한다.<br>
+위의 Resource Owner의 승인, Resource Server의 승인, Access Token 발급 과정을 반복하지 않기 위해 사용하는 방법이다.
+
+<br>
+
+<img src="img/WEB_RefreshToken.JPG"></img><br/>
+
+참고: RFC6749 https://datatracker.ietf.org/doc/html/rfc6749
+
+*상위 과정들에 나오는 Resource Server은 참고 사진의 Resource Server와 Authorization Server을 합친 것*
+<br>
+
+*위 참고 사진의 A 과정은 Resource Server의 승인 과정의 3번에 해당하는 것 같다*
+
+<br>
+
+---
+
+# WebRTC
+
+<br>
+
+## NAT
