@@ -646,3 +646,36 @@ accessToken에는 수명이있다. 수명이 다 할시에 재발급을 받아�
 <Br>
 
 ## WebSocket
+
+<br>
+
+브라우저와 서버의 통신 = HTTP<br>
+
+브라우저 -> 서버 Request<br>
+
+서버 -> 브라우저 Response<br>
+
+HTTP는 Stateless이다.<br>
+
+request - response 이후에 통신은 끊김.<br>
+
+request 없이는 response 도 없다<br>
+
+-> 서버에서 브라우저로 그냥 response를 보낼 수 없다.<br>
+
+실시간으로 데이터를 주고 받을 수 없음.<Br>
+웹 소켓 등장
+
+request - response -> open - close (connection)<Br>
+
+<Br>
+
+웹 소켓 서버에 접속하여 데이터 전송시 연결된 다른 사용자에게 전달된다.<br>
+
+사용자가 많아지면 서버에 부하가 걸린다(메모리)<br>
+
+-> __브라우저와 서버가 아닌, 브라우저와 브라우저끼리 연결하자..! = WebRTC__
+
+<br>
+
+WebRTC란?
