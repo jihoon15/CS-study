@@ -679,3 +679,22 @@ request - response -> open - close (connection)<Br>
 <br>
 
 WebRTC란?
+
+<br>
+
+> Web Real-Time Communication<br>
+> 웹 app 및 사이트들이 별도의 SW 없이 __중간자 없이__ 텍스트, 오디오, 영상 등의 데이터를 브라우저 끼리 주고 받을 수 있게 만든 기술
+
+<Br>
+
+---
+
+필요한 요소
+
+- Signaling Server
+- NAT Traversal(STUN TURN) Server
+- Media Server
+
+<Br>
+
+## Signaling Server
