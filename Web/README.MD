@@ -698,3 +698,15 @@ WebRTC란?
 <Br>
 
 ## Signaling Server
+
+<br>
+
+WebRTC는 사용자 간의 Peer to Peer 통신을 통해 데이터를 교환한다.
+그리고 이를 위해서는 통신을 하는 주체끼리의 약속이 필요하다.
+<Br>
+
+Signaling Server는 사용자 간의 P2P 통신을 위해 사용자를 엮어주는 역할을 한다.
+
+<br>
+
+## STUN, TURN
