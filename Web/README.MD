@@ -710,3 +710,12 @@ Signaling Server는 사용자 간의 P2P 통신을 위해 사용자를 엮어주
 <br>
 
 ## STUN, TURN
+
+Signaling 서버를 통해 P2P 통신을 하고자 하는데, 방확벽이 있거나 NAT 환경에서는 연결이 불가하다.<br>
+
+이런 때에 시그널링을 하기 위해서는 __방화벽을 통과시켜주거나 private ip를 public ip로 바꿔주는 STUN서버 또는 TURN서버__ 를 시용해야 한다.
+<br>중간에서 중개해줄 무언가가 필요하다.
+
+<br>
+
+### STUN Server
