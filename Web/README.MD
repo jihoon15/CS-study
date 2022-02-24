@@ -719,3 +719,16 @@ Signaling 서버를 통해 P2P 통신을 하고자 하는데, 방확벽이 있�
 <br>
 
 ### STUN Server
+<Br>
+
+__S__ ession __T__ raversal __U__ tilities for __N__ AT <br>
+
+client가 자신의 public IP를 확인하기 위해 STUN 서버로 요청을 보내고 서버로 부터 자신의 Public IP를 받는다. <br>
+~~신분을 확인받고 입장권을 받는 느낌~~
+<br>
+그리고 받은 Public IP를 이용하여 시그널링을 한다.
+
+*단, 두 Cleint가 같은 네트워크에 존재하고 있을 때는 이것으로 해결이 되지않는다<br>
+
+
+### TURN Server
