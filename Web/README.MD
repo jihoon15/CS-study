@@ -732,3 +732,9 @@ client가 자신의 public IP를 확인하기 위해 STUN 서버로 요청을 �
 
 
 ### TURN Server
+
+<br>
+Client들이 통신할 때 public 망에 존재하는 TURN 서버를 경유하여 통신하게 한다.<br>
+Client는 자신의 private IP를 포함한 TURN 메시지를 턴서보로 보내고, TURN 서버는 메시지에 포함된 주소와 UDP 포트넘버와의 차이를 통해 public ip에 응답한다.<br>
+<br>
+그리고 이때 NAT 매핑 테이블에 기록되어 있는 정보에 따라 NAT가 클라이언트의 private IP로 메시지를 전송함.
